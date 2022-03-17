@@ -8,17 +8,23 @@ public class Main {
         input.next();
         System.out.println("It's developer team time!");
     }
+
+    public static double calculateTotalMealPrice(double listedMealPrice,
+                                               double tipRate,
+                                               double taxRate) {
+        double tip = tipRate * listedMealPrice;
+        double tax = taxRate * listedMealPrice;
+        return listedMealPrice + tip + tax;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Welcome to your new job");
+        double result = Math.pow(2,5);
+        System.out.println(result);
 
-        announceDeveloperTeaTime();
-
-        System.out.println("Write code");
-        System.out.println("Review code");
-
-        announceDeveloperTeaTime();
-
-        System.out.println("Get promoted!");
+        double groupTotalMealPrice = calculateTotalMealPrice(25, .18, .08);
+        System.out.println(groupTotalMealPrice);
+        double individualTotalPrice = groupTotalMealPrice/ 5 ;
+        System.out.println(individualTotalPrice);
     }
 
 }
